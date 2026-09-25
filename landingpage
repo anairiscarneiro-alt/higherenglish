@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Higher — Inglês e Espanhol online, em grupo ou particular</title>
+<meta name="description" content="Aulas de inglês e espanhol online para adultos, ao vivo. Grupos de até 6 alunos ou aulas particulares. Primeira aula gratuita.">
+<meta name="keywords" content="aulas de inglês online, curso de inglês online, aula particular de inglês online, inglês online para adultos, inglês em grupo, aulas de espanhol online">
+<meta property="og:title" content="Higher — Inglês e Espanhol, do seu jeito">
+<meta property="og:description" content="Grupos reduzidos ou aulas particulares. Ao vivo, com acompanhamento próximo. Primeira aula gratuita.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   HIGHER — direção "editorial quente"
+   Liberdade criativa total: serifa Fraunces (calorosa, com
+   personalidade) para headlines + Inter para leitura. Paleta
+   sai do preto/vermelho puro e vai para terracota sobre creme —
+   mais humano, mais convidativo para quem decide confiar numa
+   escola de idiomas online.
+   ========================================================== */
+:root{
+  --ink: #141311;
+  --cream: #FFFFFF;
+  --paper: #FFFFFF;
+  --sand: #F3F1EC;
+  --terracotta: #D81E1E;
+  --terracotta-deep: #8A0000;
+  --gray: #6E6A60;
+  --line: rgba(20,19,17,0.16);
+
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --fs-h1: clamp(2.6rem, 6.4vw, 5rem);
+  --fs-h2: clamp(1.9rem, 3.6vw, 2.8rem);
+  --fs-h3: clamp(1.15rem, 1.8vw, 1.45rem);
+  --fs-lead: clamp(1.02rem, 1.3vw, 1.2rem);
+
+  --container: 1140px;
+  --gutter: 24px;
+  --pad: 88px;
+}
+@media(min-width:768px){ :root{ --gutter: 44px; --pad: 128px; } }
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+body{
+  margin:0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4{
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+h1 em, h2 em, h3 em, .serif-em{ font-style: italic; font-weight:400; color: var(--terracotta); }
+p{ margin: 0 0 1em; }
+p.lead{ font-size: var(--fs-lead); color: #4c473c; max-width: 48ch; }
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; display:block; }
+ul{ margin:0; padding:0; list-style:none; }
+button{ font-family: inherit; cursor:pointer; }
+.container{ max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); position:relative; z-index:1; }
+
+:focus-visible{ outline: 2px solid var(--terracotta-deep); outline-offset: 3px; }
+
+.reveal{ opacity:0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.in-view{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+.eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family: var(--font-body); font-size: 0.78rem; font-weight:600; color: var(--terracotta-deep); letter-spacing: 0.08em; text-transform: uppercase; }
+.eyebrow::before{ content:""; width:16px; height:1px; background: var(--terracotta); }
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family: var(--font-body); font-weight: 600; font-size: 0.98rem;
+  padding: 15px 30px; border-radius: 999px; border: 1.5px solid transparent;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  min-height: 50px;
+}
+.btn-primary{ background: var(--terracotta); color: var(--paper); }
+.btn-primary:hover{ background: var(--terracotta-deep); transform: translateY(-1px); }
+.btn-outline{ background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-outline:hover{ border-color: var(--terracotta); color: var(--terracotta-deep); }
+.btn-block{ width:100%; }
+.btn:active{ transform: translateY(1px); }
+
+.trust-strip{ display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+.trust-strip span{ display:flex; align-items:center; gap:7px; font-size:0.82rem; color: var(--ink); background: var(--paper); border: 1px solid var(--line); padding: 7px 14px 7px 10px; border-radius: 999px; }
+.trust-strip span::before{ content:"✓"; color: var(--terracotta); font-weight:700; font-size:0.8rem; }
+
+/* soft organic blob backgrounds */
+.blob{ position:absolute; border-radius: 62% 38% 55% 45% / 48% 60% 40% 52%; filter: blur(2px); z-index:0; pointer-events:none; }
+
+/* ---------- NAV ---------- */
+.nav{
+  position: sticky; top:0; z-index: 40;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .container{ display:flex; align-items:center; justify-content:space-between; height: 80px; }
+.logo{ font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; display:flex; align-items:baseline; gap:8px; color: var(--ink); }
+.logo .sub{ font-family: var(--font-body); font-weight:500; font-size:0.65rem; color: var(--gray); letter-spacing: 0.1em; text-transform:uppercase; }
+.nav-links{ display:none; gap: 32px; font-size: 0.93rem; font-weight:500; }
+.nav-links a:hover{ color: var(--terracotta-deep); }
+.nav-cta{ display:none; }
+.nav-toggle{ background:none; border:none; padding:8px; display:flex; flex-direction:column; gap:5px; }
+.nav-toggle span{ width:22px; height:2px; border-radius:2px; background: var(--ink); }
+.mobile-menu{ display:none; flex-direction:column; border-bottom: 1px solid var(--line); background: var(--cream); }
+.mobile-menu.open{ display:flex; }
+.mobile-menu a{ padding: 16px var(--gutter); border-top: 1px solid var(--line); font-size:1rem; font-weight:500; }
+.mobile-menu .btn{ margin: 16px var(--gutter) 20px; }
+
+@media(min-width: 900px){
+  .nav-links{ display:flex; }
+  .nav-cta{ display:inline-flex; }
+  .nav-toggle{ display:none; }
+  .mobile-menu{ display:none !important; }
+}
+
+/* ---------- HERO ---------- */
+.hero{ padding: 64px 0 var(--pad); position:relative; overflow:hidden; }
+.hero .blob-a{ width:520px; height:520px; background: var(--sand); top:-140px; right:-160px; opacity:0.9; }
+.hero .blob-b{ width:280px; height:280px; background: rgba(216,30,30,0.12); bottom:-60px; left:8%; }
+.hero .container{ display:grid; gap: 52px; }
+.hero-copy h1{ color: var(--ink); }
+.hero-copy .lead{ margin-top: 24px; }
+.hero-ctas{ display:flex; flex-wrap:wrap; gap: 16px; margin-top: 34px; }
+.new-chip{
+  display:inline-flex; align-items:center; gap:10px; margin-top: 26px;
+  background: var(--paper); border: 1px solid var(--line); border-radius:999px;
+  padding: 8px 16px 8px 8px; font-size: 0.85rem;
+}
+.new-chip b{ background: var(--terracotta); color: var(--paper); font-size: 0.68rem; font-weight:700; padding: 4px 10px; border-radius:999px; letter-spacing:0.03em; }
+.new-chip:hover{ border-color: var(--terracotta); }
+
+.hero-card{
+  background: var(--paper); border-radius: 28px; padding: 36px;
+  box-shadow: 0 30px 60px -35px rgba(20,19,17,0.28);
+  position:relative;
+}
+.fact-row{ display:flex; justify-content:space-between; align-items:baseline; padding: 18px 0; border-bottom: 1px solid var(--line); gap:16px; }
+.fact-row:last-child{ border-bottom:none; padding-bottom:0; }
+.fact-row:first-child{ padding-top:0; }
+.fact-row .k{ font-family: var(--font-display); font-weight:500; font-size: 1.15rem; color: var(--ink); }
+.fact-row .v{ font-size: 0.85rem; color: var(--gray); text-align:right; }
+.hero-card .tag{ display:inline-block; background: var(--sand); color: var(--terracotta-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.04em; padding: 6px 12px; border-radius:999px; margin-bottom:20px; }
+
+@media(min-width: 980px){
+  .hero .container{ grid-template-columns: 1.15fr 0.85fr; align-items:center; }
+}
+
+/* ---------- SECTION HEAD ---------- */
+.section-head{ max-width: 640px; margin-bottom: 48px; }
+.section-head h2{ margin-top: 14px; }
+
+/* ---------- HOW ---------- */
+.how{ padding: var(--pad) 0; }
+.steps{ display:grid; gap: 20px; }
+.step{ background: var(--paper); border-radius: 22px; padding: 32px 28px; border: 1px solid var(--line); }
+.step .num{ font-family: var(--font-display); font-style:italic; font-size: 2.2rem; color: var(--terracotta); line-height:1; }
+.step h3{ margin-top: 16px; }
+.step p{ margin-top: 10px; color:#4c473c; max-width: 34ch; }
+.how-note{ margin-top: 36px; font-family: var(--font-display); font-style:italic; color: var(--terracotta-deep); font-size:1.1rem; }
+
+@media(min-width:768px){ .steps{ grid-template-columns: repeat(3,1fr); } }
+
+/* ---------- PRODUCTS ---------- */
+.products{ padding: var(--pad) 0; }
+.lang-tabs{ display:inline-flex; gap: 4px; margin-bottom: 40px; background: var(--sand); padding: 5px; border-radius: 999px; }
+.lang-tab{
+  background:none; border:none; padding: 10px 22px;
+  font-family: var(--font-body); font-weight:600; font-size: 0.92rem; color: var(--gray);
+  border-radius: 999px; display:flex; align-items:center; gap:8px;
+}
+.lang-tab.active{ background: var(--paper); color: var(--ink); box-shadow: 0 6px 16px -10px rgba(20,19,17,0.3); }
+.tab-badge{ background: var(--terracotta); color: var(--paper); font-size: 0.62rem; font-weight:700; padding: 2px 8px; border-radius:999px; }
+.lang-panel[hidden]{ display:none; }
+
+.plans{ display:grid; gap: 22px; margin-top: 8px; }
+.plan{
+  background: var(--paper); border-radius: 26px; padding: 38px 34px;
+  display:flex; flex-direction:column; border: 1px solid var(--line);
+  box-shadow: 0 24px 50px -36px rgba(20,19,17,0.22);
+  transition: transform .2s ease;
+}
+.plan:hover{ transform: translateY(-4px); }
+.plan.highlight{ background: var(--ink); border-color: var(--ink); color: var(--cream); }
+.plan-name{ font-family: var(--font-body); font-weight:700; font-size:0.82rem; letter-spacing:0.06em; color: var(--gray); text-transform:uppercase; }
+.plan.highlight .plan-name{ color: #c9c4b6; }
+.plan-price{ margin-top: 14px; font-family: var(--font-display); font-weight: 500; font-size: clamp(2.6rem,5vw,3.6rem); color: var(--ink); display:block; }
+.plan.highlight .plan-price{ color: var(--cream); }
+.plan-price span{ font-size: 1rem; font-weight:500; color: var(--gray); font-family: var(--font-body); }
+.plan.highlight .plan-price span{ color: #a49e8d; }
+.plan-per{ display:block; font-size: 0.82rem; color: var(--gray); margin-top: 8px; }
+.plan.highlight .plan-per{ color: #a49e8d; }
+.plan-tag{ display:inline-block; margin-top:16px; background: var(--sand); color: var(--terracotta-deep); font-size: 0.74rem; font-weight:700; padding: 6px 13px; border-radius:999px; }
+.plan.highlight .plan-tag{ background: rgba(216,30,30,0.25); color: #ff9d94; }
+.plan-list{ margin: 28px 0 8px; display:flex; flex-direction:column; gap: 12px; }
+.plan-list li{ padding-left: 26px; position:relative; font-size:0.96rem; }
+.plan-list li::before{ content:"✓"; position:absolute; left:0; color: var(--terracotta); font-weight:700; }
+.plan.highlight .plan-list li::before{ color: var(--terracotta); }
+.plan-foot{ margin-top: auto; padding-top: 28px; }
+.plan-hint{ font-size: 0.84rem; color: var(--gray); margin-top: 14px; }
+.plan.highlight .plan-hint{ color: #a49e8d; }
+.plan.highlight .btn-primary{ background: var(--terracotta); }
+.soon-price{ font-size: clamp(1.8rem,3.5vw,2.3rem) !important; }
+
+@media(min-width:768px){ .plans{ grid-template-columns: 1fr 1fr; } .plans-3{ grid-template-columns: 1fr 1fr; } }
+@media(min-width:1080px){ .plans-3{ grid-template-columns: repeat(3,1fr); } }
+
+/* ---------- COMPARE ---------- */
+.compare{ padding: var(--pad) 0; }
+.compare-table-wrap{ background: var(--paper); border-radius: 22px; border: 1px solid var(--line); overflow:hidden; margin-top: 8px; }
+.compare-table{ width:100%; border-collapse: collapse; font-size: 0.95rem; }
+.compare-table th, .compare-table td{ text-align:left; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.compare-table thead th{ background: var(--sand); font-family: var(--font-body); font-weight:700; color: var(--terracotta-deep); font-size:0.78rem; letter-spacing:0.05em; text-transform:uppercase; }
+.compare-table tbody tr:last-child td{ border-bottom:none; }
+.compare-table td:first-child{ color: var(--gray); }
+.compare-table thead th:not(:first-child), .compare-table tbody td:nth-child(2), .compare-table tbody td:nth-child(3), .compare-table tbody td:nth-child(4){ font-family: var(--font-display); font-weight:500; }
+
+/* ---------- WHY ---------- */
+.why{ padding: var(--pad) 0; background: var(--ink); color: var(--cream); position:relative; overflow:hidden; }
+.why .blob-c{ width:420px; height:420px; background: rgba(216,30,30,0.18); top:-120px; right:-100px; }
+.why .eyebrow{ color: var(--terracotta); }
+.why .eyebrow::before{ background: var(--terracotta); }
+.why-list{ display:grid; gap: 16px; }
+.why-list li{ background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 20px 22px; font-size: 1.02rem; }
+@media(min-width:768px){ .why-list{ grid-template-columns: 1fr 1fr; } }
+
+/* ---------- FIT ---------- */
+.fit{ padding: var(--pad) 0; }
+.fit-grid{ display:grid; gap: 22px; margin-top: 8px; }
+.fit-col{ background: var(--paper); border-radius: 24px; padding: 34px 32px; border: 1px solid var(--line); }
+.fit-col.yes{ border-color: rgba(216,30,30,0.3); }
+.fit-col h3{ font-size: 1.05rem; margin-bottom: 20px; }
+.fit-col.yes h3{ color: var(--terracotta-deep); }
+.fit-col ul{ display:flex; flex-direction:column; gap: 13px; }
+.fit-col li{ padding-left: 24px; position:relative; font-size: 0.96rem; }
+.fit-col.yes li::before{ content:"✓"; position:absolute; left:0; color: var(--terracotta); font-weight:700; }
+.fit-col.no li::before{ content:"–"; position:absolute; left:0; color: var(--gray); font-weight:700; }
+@media(min-width:768px){ .fit-grid{ grid-template-columns: 1fr 1fr; } }
+
+/* ---------- ABOUT ---------- */
+.about{ padding: var(--pad) 0; }
+.about-grid{ display:grid; gap: 36px; align-items:center; }
+.about-statement{ font-family: var(--font-display); font-style:italic; font-size: 1.7rem; font-weight:400; max-width: 22ch; color: var(--ink); }
+.about-honest{ margin-top: 20px; font-size: 0.92rem; color: var(--gray); max-width: 42ch; }
+@media(min-width:900px){ .about-grid{ grid-template-columns: 1fr 1fr; } }
+
+/* ---------- COMMITMENTS ---------- */
+.commitments{ padding: var(--pad) 0; }
+.commit-grid{ display:grid; gap: 18px; margin-top: 8px; }
+.commit-item{ background: var(--paper); border-radius: 22px; padding: 28px 26px; border: 1px solid var(--line); }
+.commit-item .t{ font-family: var(--font-display); font-weight:500; font-size: 1.08rem; }
+.commit-item .d{ margin-top: 10px; font-size: 0.9rem; color: var(--gray); }
+.commit-note{ margin-top: 26px; font-size: 0.85rem; color: var(--gray); font-style:italic; }
+@media(min-width:768px){ .commit-grid{ grid-template-columns: repeat(2,1fr); } }
+
+/* ---------- FAQ ---------- */
+.faq{ padding: var(--pad) 0; }
+.faq-list{ margin-top: 8px; max-width: 780px; display:flex; flex-direction:column; gap: 10px; }
+.faq-item{ background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 0 22px; }
+.faq-item[open]{ background: var(--sand); border-color: transparent; }
+.faq-item summary{ list-style:none; padding: 20px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family: var(--font-display); font-weight:500; font-size: 1.04rem; }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary .mark{ font-family: var(--font-body); font-size:1.3rem; font-weight:400; color: var(--terracotta); flex:none; margin-left:16px; transition: transform .2s ease; }
+.faq-item[open] summary .mark{ transform: rotate(45deg); }
+.faq-item p{ padding-bottom: 20px; color:#4c473c; max-width: 62ch; }
+
+/* ---------- FINAL CTA ---------- */
+.final-cta{ padding: var(--pad) 0; text-align:center; background: var(--terracotta); color: var(--paper); position:relative; overflow:hidden; }
+.final-cta .blob-d{ width:480px; height:480px; background: rgba(255,255,255,0.08); bottom:-180px; left:-140px; }
+.final-cta h2{ color: var(--paper); max-width: 18ch; margin: 0 auto; }
+.final-cta p.lead{ color: rgba(255,255,255,0.88); margin: 20px auto 34px; }
+.final-cta .btn-primary{ background: var(--ink); color: var(--paper); }
+.final-cta .btn-primary:hover{ background: #000; }
+.reassure-grid{ display:grid; gap: 14px; margin: 0 auto 36px; max-width: 820px; text-align:left; }
+.reassure-item{ background: rgba(255,255,255,0.12); border-radius: 18px; padding: 18px 22px; }
+.reassure-item .q{ font-family: var(--font-display); font-weight:500; font-size: 0.95rem; }
+.reassure-item .a{ font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-top: 5px; }
+@media(min-width:700px){ .reassure-grid{ grid-template-columns: repeat(3,1fr); } }
+
+/* ---------- FOOTER ---------- */
+footer{ background: var(--ink); color: var(--cream); padding: 64px 0 30px; }
+.footer-grid{ display:grid; gap: 36px; }
+.footer-logo{ font-family: var(--font-display); font-weight:600; font-size:1.5rem; }
+.footer-logo .sub{ font-family: var(--font-body); font-weight:500; font-size:0.65rem; color:#8f8a7c; display:block; letter-spacing:0.1em; margin-top:6px; text-transform:uppercase; }
+.footer-links{ display:flex; flex-direction:column; gap: 13px; font-size:0.94rem; }
+.footer-links a{ color: #d9d4c6; }
+.footer-links a:hover{ color: var(--terracotta); }
+.footer-legal{ margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.8rem; color:#7c7768; }
+@media(min-width:768px){ .footer-grid{ grid-template-columns: 1.2fr 1fr 1fr; } }
+
+/* ---------- WHATSAPP FAB ---------- */
+.wa-fab{
+  position: fixed; right: 20px; bottom: 20px; z-index: 45;
+  background: var(--ink); color: var(--cream);
+  width: 56px; height:56px; border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 14px 30px -12px rgba(20,19,17,0.5);
+}
+.wa-fab svg{ width:24px; height:24px; }
+
+/* ---------- STICKY MOBILE CTA ---------- */
+.sticky-cta{
+  position: fixed; left:0; right:0; bottom:0; z-index: 44;
+  background: var(--paper); border-top: 1px solid var(--line);
+  padding: 12px var(--gutter); padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  transform: translateY(120%); transition: transform .25s ease;
+}
+.sticky-cta.visible{ transform: translateY(0); }
+.sticky-cta .btn{ width:100%; }
+@media(min-width: 900px){ .sticky-cta{ display:none; } }
+@media(max-width: 899px){ .wa-fab{ bottom: 88px; } }
+
+/* ---------- BOOKING OVERLAY ---------- */
+.booking-overlay{
+  position: fixed; inset:0; z-index: 100;
+  background: rgba(20,19,17,0.55);
+  display:none; align-items:flex-end; justify-content:center;
+}
+.booking-overlay.open{ display:flex; }
+.booking-panel{
+  background: var(--cream);
+  width: 100%; max-height: 92vh; overflow-y:auto;
+  padding: 30px var(--gutter) 40px;
+  border-radius: 28px 28px 0 0;
+}
+@media(min-width:768px){
+  .booking-overlay{ align-items:center; }
+  .booking-panel{ width: 560px; max-height: 86vh; border-radius: 28px; }
+}
+.booking-head{ display:flex; align-items:flex-start; justify-content:space-between; margin-bottom: 24px; }
+.booking-head .eyebrow{ display:flex; margin-bottom:6px; }
+.step-indicator{ display:block; font-size: 0.78rem; color: var(--gray); margin-top:4px; }
+.booking-close{ background: var(--paper); border:none; width:34px; height:34px; border-radius:50%; font-size:1.3rem; line-height:1; color: var(--ink); }
+.booking-body h3{ font-size: 1.4rem; margin-bottom: 8px; }
+.booking-body > p{ color:#4c473c; margin-bottom: 22px; }
+.form-note{ font-size: 0.82rem; color: var(--gray); margin-bottom: 20px; }
+
+.choice-grid{ display:grid; gap: 14px; }
+@media(min-width:480px){ .choice-grid{ grid-template-columns: 1fr 1fr; } }
+.choice-card{
+  border: 1.5px solid var(--line); background: var(--paper); border-radius: 18px;
+  padding: 22px 20px; text-align:left;
+  display:flex; flex-direction:column; gap:6px;
+}
+.choice-card:hover{ border-color: var(--terracotta); }
+.choice-card .t{ font-family: var(--font-display); font-weight:500; font-size:1.15rem; }
+.choice-card .d{ font-size: 0.85rem; color: var(--gray); }
+
+.slot-list{ display:flex; flex-direction:column; gap: 12px; }
+.slot-card{
+  border: 1.5px solid var(--line); background: var(--paper); border-radius: 16px;
+  padding: 16px 20px; display:flex; justify-content:space-between; align-items:center; text-align:left;
+}
+.slot-card:hover{ border-color: var(--terracotta); }
+.slot-card .day{ font-family: var(--font-display); font-weight:500; }
+.slot-card .time{ font-size:0.85rem; color: var(--gray); }
+.slot-card .go{ font-family: var(--font-body); font-weight:700; color: var(--terracotta-deep); font-size:0.85rem; }
+
+.form-field{ margin-bottom: 16px; display:flex; flex-direction:column; gap:7px; }
+.form-field label{ font-size: 0.84rem; font-weight:600; color: var(--ink); }
+.form-field input, .form-field select, .form-field textarea{
+  font-family: var(--font-body); font-size: 1rem;
+  padding: 13px 16px; border: 1.5px solid var(--line); background: var(--paper);
+  border-radius: 14px;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus{ border-color: var(--terracotta); outline:none; }
+.form-field textarea{ resize: vertical; min-height: 70px; }
+
+.back-link{ display:inline-block; margin-bottom: 18px; font-size: 0.9rem; color: var(--gray); }
+.back-link:hover{ color: var(--terracotta-deep); }
+
+.confirm-box{ background: var(--paper); border-radius: 20px; padding: 22px; margin-bottom: 20px; }
+.confirm-row{ display:flex; justify-content:space-between; padding: 9px 0; border-bottom: 1px solid var(--line); font-size:0.95rem; }
+.confirm-row:last-child{ border-bottom:none; }
+.confirm-row .k{ color: var(--gray); }
+.confirm-row .v{ font-weight:600; text-align:right; }
+
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <!-- Substituir pela wordmark/monograma oficial (SVG) da Higher quando disponível -->
+    <a href="#inicio" class="logo" aria-label="Higher — início">Higher<span class="sub">Languages</span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#planos">Grupo</a>
+      <a href="#planos">Particular</a>
+      <a href="#por-que">Por que a Higher</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a href="#" class="btn btn-primary nav-cta" data-wa-cta target="_blank" rel="noopener">Agendar aula gratuita</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#planos">Grupo</a>
+    <a href="#planos">Particular</a>
+    <a href="#por-que">Por que a Higher</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#" class="btn btn-primary" data-wa-cta target="_blank" rel="noopener">Agendar aula gratuita</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <span class="blob blob-a" aria-hidden="true"></span>
+  <span class="blob blob-b" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-copy">
+      <p class="eyebrow">Inglês e espanhol online, para adultos</p>
+      <h1>Seu idioma,<br><em>do seu jeito.</em></h1>
+      <p class="lead">Turmas de até 6 alunos, com 1 encontro por semana ou encontros diários de segunda a quinta — ou aulas particulares com 4 encontros por semana. Ao vivo, com professor de verdade — não é curso gravado.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary" data-wa-cta target="_blank" rel="noopener">Agendar primeira aula gratuita</a>
+        <a href="#planos" class="btn btn-outline">Conhecer os planos</a>
+      </div>
+      <div class="trust-strip">
+        <span>Sem cartão de crédito</span>
+        <span>Sem fidelidade</span>
+        <span>Você escolhe o horário</span>
+      </div>
+      <a href="#planos" class="new-chip"><b>Novo</b> Agora também em Espanhol</a>
+    </div>
+    <div class="hero-card">
+      <span class="tag">Primeira aula gratuita</span>
+      <div class="fact-row"><span class="k">Pacote 1</span><span class="v">Até 6 alunos<br>1×/semana</span></div>
+      <div class="fact-row"><span class="k">Pacote 2</span><span class="v">Até 6 alunos<br>Seg a qui</span></div>
+      <div class="fact-row"><span class="k">Private</span><span class="v">1 aluno<br>4×/semana, 30min</span></div>
+      <div class="fact-row"><span class="k">Formato</span><span class="v">Ao vivo, online</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="how" id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Três passos até a sua <em>primeira aula</em>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Escolha seu formato</h3>
+        <p>Grupo reduzido ou particular — você decide o que combina com sua rotina.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Faça sua primeira aula</h3>
+        <p>Experimente a Higher gratuitamente, antes de decidir qualquer coisa.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Continue com a Higher</h3>
+        <p>Se gostar da experiência, escolha seu plano e continue no seu ritmo.</p>
+      </div>
+    </div>
+    <p class="how-note">Sem compromisso de matrícula após a aula.</p>
+  </div>
+</section>
+
+<!-- ============ PRODUTOS ============ -->
+<section class="products" id="planos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Planos</p>
+      <h2>Escolha <em>como</em> você quer aprender.</h2>
+    </div>
+
+    <div class="lang-tabs" role="tablist" aria-label="Escolher idioma">
+      <button class="lang-tab active" id="tabEn" role="tab" aria-selected="true" aria-controls="panelEn" data-lang="en">Inglês</button>
+      <button class="lang-tab" id="tabEs" role="tab" aria-selected="false" aria-controls="panelEs" data-lang="es">Espanhol <span class="tab-badge">novo</span></button>
+    </div>
+
+    <div class="lang-panel" id="panelEn" role="tabpanel" aria-labelledby="tabEn">
+      <div class="plans plans-3">
+        <div class="plan highlight">
+          <span class="plan-name">Pacote 1</span>
+          <span class="plan-price">R$100<span>/mês</span></span>
+          <span class="plan-per">≈ R$25 por aula (média mensal)</span>
+          <span class="plan-tag">Turmas de até 6 alunos</span>
+          <ul class="plan-list">
+            <li>Até 6 alunos por turma</li>
+            <li>1 encontro por semana</li>
+            <li>Aulas ao vivo, online</li>
+            <li>Turmas organizadas por nível</li>
+            <li>Primeira aula gratuita</li>
+          </ul>
+          <div class="plan-foot">
+            <a href="#" class="btn btn-primary btn-block" id="ctaPacote1" target="_blank" rel="noopener">Agendar aula gratuita</a>
+            <p class="plan-hint">Sem cartão de crédito.</p>
+          </div>
+        </div>
+        <div class="plan highlight">
+          <span class="plan-name">Pacote 2</span>
+          <span class="plan-price">R$250<span>/mês</span></span>
+          <span class="plan-per">≈ R$14 por aula (média mensal)</span>
+          <span class="plan-tag">Turmas de até 6 alunos</span>
+          <ul class="plan-list">
+            <li>Até 6 alunos por turma</li>
+            <li>Encontros diários, de segunda a quinta</li>
+            <li>Aulas ao vivo, online</li>
+            <li>Turmas organizadas por nível</li>
+            <li>Primeira aula gratuita</li>
+          </ul>
+          <div class="plan-foot">
+            <a href="#" class="btn btn-primary btn-block" id="ctaPacote2" target="_blank" rel="noopener">Agendar aula gratuita</a>
+            <p class="plan-hint">Sem cartão de crédito.</p>
+          </div>
+        </div>
+        <div class="plan">
+          <span class="plan-name">Higher Private</span>
+          <span class="plan-price">R$499<span>/mês</span></span>
+          <span class="plan-per">≈ R$31 por aula de 30min (média mensal)</span>
+          <ul class="plan-list">
+            <li>Aulas individuais</li>
+            <li>4 encontros por semana</li>
+            <li>30 minutos por encontro</li>
+            <li>Aulas ao vivo, online</li>
+            <li>Primeira aula gratuita</li>
+          </ul>
+          <div class="plan-foot">
+            <a href="#" class="btn btn-primary btn-block" id="ctaPrivate" target="_blank" rel="noopener">Agendar aula gratuita</a>
+            <p class="plan-hint">Agenda individual, sem cartão de crédito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lang-panel" id="panelEs" role="tabpanel" aria-labelledby="tabEs" hidden>
+      <p class="lead" style="margin-bottom:28px;">O Higher Spanish está chegando, com a mesma lógica do Higher English. Preços e horários em breve — cadastre seu interesse e avisamos assim que abrir.</p>
+      <div class="plans">
+        <div class="plan">
+          <span class="plan-name">Higher Spanish Group</span>
+          <span class="plan-price soon-price">Em breve</span>
+          <span class="plan-tag">Turmas fechadas em até 4 alunos</span>
+          <ul class="plan-list">
+            <li>Até 4 alunos por turma</li>
+            <li>Aulas ao vivo, online</li>
+            <li>Turmas organizadas por nível</li>
+          </ul>
+          <div class="plan-foot">
+            <a href="#" class="btn btn-primary btn-block" id="esInterestGroup">Quero ser avisado</a>
+            <p class="plan-hint">Sem compromisso — só um aviso quando abrir.</p>
+          </div>
+        </div>
+        <div class="plan">
+          <span class="plan-name">Higher Spanish Private</span>
+          <span class="plan-price soon-price">Em breve</span>
+          <ul class="plan-list">
+            <li>Aulas individuais</li>
+            <li>Aulas ao vivo, online</li>
+          </ul>
+          <div class="plan-foot">
+            <a href="#" class="btn btn-primary btn-block" id="esInterestPrivate">Quero ser avisado</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARAÇÃO ============ -->
+<section class="compare">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Comparação</p>
+      <h2>Os três planos, <em>lado a lado</em>.</h2>
+    </div>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th scope="col">&nbsp;</th><th scope="col">Pacote 1</th><th scope="col">Pacote 2</th><th scope="col">Private</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alunos</td><td>Até 6</td><td>Até 6</td><td>1</td></tr>
+          <tr><td>Frequência</td><td>1×/semana</td><td>Seg a qui</td><td>4×/semana</td></tr>
+          <tr><td>Duração</td><td>~1h</td><td>~1h</td><td>30 min</td></tr>
+          <tr><td>Formato</td><td>Online, ao vivo</td><td>Online, ao vivo</td><td>Online, ao vivo</td></tr>
+          <tr><td>Primeira aula</td><td>Gratuita</td><td>Gratuita</td><td>Gratuita</td></tr>
+          <tr><td>Mensalidade</td><td>R$100</td><td>R$250</td><td>R$499</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUE HIGHER ============ -->
+<section class="why" id="por-que">
+  <span class="blob blob-c" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Por que a Higher</p>
+      <h2>Inglês com <em>acompanhamento próximo</em>.</h2>
+    </div>
+    <ul class="why-list">
+      <li>Grupos realmente pequenos</li>
+      <li>Atenção próxima em cada encontro</li>
+      <li>Aulas ao vivo, nunca gravadas</li>
+      <li>Rotina consistente, semana a semana</li>
+      <li>Experiência 100% online</li>
+      <li>Primeira aula sempre gratuita</li>
+      <li>Opção particular, para quem quer intensidade</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM É ============ -->
+<section class="fit">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Para quem é a Higher</p>
+      <h2>Melhor sermos <em>diretos</em> sobre isso.</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h3>Faz sentido pra você se:</h3>
+        <ul>
+          <li>Você quer praticar toda semana, com constância</li>
+          <li>Você prefere turmas pequenas a salas cheias</li>
+          <li>Você valoriza aula ao vivo, com correção na hora</li>
+          <li>Você quer experimentar antes de se comprometer</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h3>Talvez não seja o momento se:</h3>
+        <ul>
+          <li>Você procura um curso gravado, para assistir quando der</li>
+          <li>Você não consegue se comprometer com encontros semanais</li>
+          <li>Você só quer material de apoio para outro curso</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div>
+      <p class="eyebrow">Sobre a Higher</p>
+      <p class="about-statement" style="margin-top:16px;">Estrutura de escola, com a proximidade de uma <em>experiência personalizada</em>.</p>
+    </div>
+    <div>
+      <p class="lead" style="max-width:52ch;">A Higher nasceu para oferecer uma experiência de idiomas mais próxima, simples e personalizada — turmas pequenas, aulas ao vivo e um acompanhamento que faz sentido para adultos com rotina.</p>
+      <p class="about-honest">Sem promessa de fluência em X meses. Só um jeito mais próximo de estudar, que você testa antes de decidir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPROMISSOS ============ -->
+<section class="commitments" id="depoimentos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Nossos compromissos</p>
+      <h2>O que você pode esperar, <em>sempre</em>.</h2>
+    </div>
+    <div class="commit-grid">
+      <div class="commit-item">
+        <span class="t">Turmas de no máximo 6 alunos</span>
+        <p class="d">Sem exceção — é o que garante a atenção próxima das turmas.</p>
+      </div>
+      <div class="commit-item">
+        <span class="t">Aulas sempre ao vivo</span>
+        <p class="d">Nunca gravadas. Você interage e é corrigido em tempo real.</p>
+      </div>
+      <div class="commit-item">
+        <span class="t">Primeira aula sem nenhum custo</span>
+        <p class="d">Sem pedir cartão de crédito, sem letras miúdas.</p>
+      </div>
+      <div class="commit-item">
+        <span class="t">Você decide depois de experimentar</span>
+        <p class="d">Nenhuma cobrança automática após a aula gratuita.</p>
+      </div>
+    </div>
+    <p class="commit-note">Em breve, este espaço também vai reunir depoimentos reais de alunos da Higher.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Como funciona a primeira aula gratuita?<span class="mark">+</span></summary>
+        <p>Você fala com a gente pelo WhatsApp e combinamos o melhor horário para sua aula ao vivo, sem custo e sem compromisso de matrícula.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quantos alunos há na turma?<span class="mark">+</span></summary>
+        <p>As turmas do Pacote 1 e do Pacote 2 têm até 6 alunos, organizadas por nível.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso saber meu nível?<span class="mark">+</span></summary>
+        <p>Não. Ao combinar sua aula pelo WhatsApp, pedimos uma estimativa do seu nível apenas para te encaminhar para a turma ou aula mais adequada.</p>
+      </details>
+      <details class="faq-item">
+        <summary>As aulas são online?<span class="mark">+</span></summary>
+        <p>Sim. Todas as aulas, em turma ou particulares, acontecem ao vivo e online.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Posso escolher o horário da turma?<span class="mark">+</span></summary>
+        <p>Sim, combinamos o horário com você diretamente pelo WhatsApp, de acordo com as turmas abertas no momento.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso continuar depois da primeira aula?<span class="mark">+</span></summary>
+        <p>Não. A primeira aula é gratuita e sem compromisso. Você decide depois de experimentar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Qual a diferença entre Pacote 1, Pacote 2 e Private?<span class="mark">+</span></summary>
+        <p>Pacote 1 e Pacote 2 são turmas de até 6 alunos: o Pacote 1 tem 1 encontro por semana, e o Pacote 2 tem encontros diários, de segunda a quinta. Private é individual, com 4 encontros de 30 minutos por semana.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Vocês têm aulas de espanhol?<span class="mark">+</span></summary>
+        <p>Sim! O Higher Spanish está chegando, seguindo a mesma lógica do Higher English. Cadastre seu interesse na aba "Espanhol" da seção de planos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final-cta">
+  <span class="blob blob-d" aria-hidden="true"></span>
+  <div class="container">
+    <h2>Você não precisa <em>decidir agora</em>.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto;">Experimente a Higher primeiro, sem custo e sem compromisso.</p>
+    <div class="reassure-grid">
+      <div class="reassure-item">
+        <p class="q">Preciso pagar para agendar?</p>
+        <p class="a">Não. A primeira aula é 100% gratuita.</p>
+      </div>
+      <div class="reassure-item">
+        <p class="q">Preciso já saber o idioma?</p>
+        <p class="a">Não. Começamos do seu nível atual.</p>
+      </div>
+      <div class="reassure-item">
+        <p class="q">Serei cobrado depois, automaticamente?</p>
+        <p class="a">Não. Você decide se quer continuar.</p>
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary" data-wa-cta target="_blank" rel="noopener">Agendar primeira aula gratuita</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo">Higher<span class="sub">Languages</span></div>
+    </div>
+    <nav class="footer-links" aria-label="Links">
+      <a href="#planos">Grupo</a>
+      <a href="#planos">Particular</a>
+      <a href="#planos">Espanhol (novo)</a>
+      <a href="#" data-wa-cta target="_blank" rel="noopener">Primeira aula gratuita</a>
+      <a href="#" id="footerWhatsapp" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </nav>
+    <div class="footer-links">
+      <a href="#faq">Dúvidas frequentes</a>
+      <a href="#sobre">Sobre a Higher</a>
+    </div>
+  </div>
+  <div class="container footer-legal">
+    Higher Languages © <span id="year"></span>. Todos os direitos reservados.<br>
+    <!-- Preencher com razão social, CNPJ e endereço quando disponíveis -->
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#" class="btn btn-primary" data-wa-cta target="_blank" rel="noopener">Agendar aula gratuita</a>
+</div>
+
+<a href="#" id="waFab" class="wa-fab" target="_blank" rel="noopener" aria-label="Falar com a Higher no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.4C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1s-.6.8-.7.9c-.1.1-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.4c.1-.1.2-.2.2-.4.1-.1.1-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ================= CONFIG — editar aqui ================= */
+  var CONFIG = {
+    whatsappNumber: "5521967501734", // Número real da Higher — WhatsApp é o caminho pra tudo
+    privateBookingUrl: "https://calendly.com/anairiscarneiro" // Agenda de aulas particulares
+  };
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  var waLink = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero saber mais sobre a Higher.");
+  document.getElementById("waFab").href = waLink;
+  document.getElementById("footerWhatsapp").href = waLink;
+
+  var esGroupLink = document.getElementById("esInterestGroup");
+  var esPrivateLink = document.getElementById("esInterestPrivate");
+  if(esGroupLink) esGroupLink.href = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero ser avisado quando o Higher Spanish (Group) abrir.");
+  if(esPrivateLink) esPrivateLink.href = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero ser avisado quando o Higher Spanish (Private) abrir.");
+
+  /* ================= LANGUAGE TABS ================= */
+  var tabEn = document.getElementById("tabEn");
+  var tabEs = document.getElementById("tabEs");
+  var panelEn = document.getElementById("panelEn");
+  var panelEs = document.getElementById("panelEs");
+  function selectLang(lang){
+    var isEn = lang === "en";
+    tabEn.classList.toggle("active", isEn);
+    tabEs.classList.toggle("active", !isEn);
+    tabEn.setAttribute("aria-selected", isEn ? "true" : "false");
+    tabEs.setAttribute("aria-selected", isEn ? "false" : "true");
+    if(isEn){ panelEn.hidden = false; panelEs.hidden = true; } else { panelEn.hidden = true; panelEs.hidden = false; }
+  }
+  tabEn.addEventListener("click", function(){ selectLang("en"); });
+  tabEs.addEventListener("click", function(){ selectLang("es"); });
+
+  /* ================= MOBILE NAV ================= */
+  var navToggle = document.getElementById("navToggle");
+  var mobileMenu = document.getElementById("mobileMenu");
+  navToggle.addEventListener("click", function(){
+    var open = mobileMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  mobileMenu.addEventListener("click", function(e){
+    if(e.target.tagName === "A"){ mobileMenu.classList.remove("open"); navToggle.setAttribute("aria-expanded","false"); }
+  });
+
+  /* ================= SCROLL REVEAL ================= */
+  var revealTargets = document.querySelectorAll(".section-head, .plan, .commit-item, .fit-col, .step");
+  if("IntersectionObserver" in window){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(function(el){ el.classList.add("reveal"); revealObserver.observe(el); });
+  }
+
+  /* ================= STICKY MOBILE CTA ================= */
+  var stickyCta = document.getElementById("stickyCta");
+  var heroEl = document.querySelector(".hero");
+  var stickyTicking = false;
+  function updateSticky(){
+    stickyTicking = false;
+    if(!heroEl) return;
+    var show = window.scrollY > heroEl.offsetHeight;
+    stickyCta.classList.toggle("visible", show);
+  }
+  window.addEventListener("scroll", function(){
+    if(!stickyTicking){ window.requestAnimationFrame(updateSticky); stickyTicking = true; }
+  });
+  updateSticky();
+
+  /* ================= WHATSAPP — CAMINHO PRA TUDO ================= */
+  var genericWaLink = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero agendar minha primeira aula gratuita na Higher.");
+  document.querySelectorAll("[data-wa-cta]").forEach(function(el){
+    el.setAttribute("href", genericWaLink);
+  });
+
+  var ctaPacote1 = document.getElementById("ctaPacote1");
+  var ctaPacote2 = document.getElementById("ctaPacote2");
+  if(ctaPacote1) ctaPacote1.href = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero agendar minha aula gratuita do Pacote 1 (1x por semana).");
+  if(ctaPacote2) ctaPacote2.href = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent("Oi! Quero agendar minha aula gratuita do Pacote 2 (encontros diários, de segunda a quinta).");
+
+  var ctaPrivate = document.getElementById("ctaPrivate");
+  if(ctaPrivate) ctaPrivate.href = CONFIG.privateBookingUrl;
+})();
+</script>
+</body>
+</html>
